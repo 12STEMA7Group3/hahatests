@@ -24,7 +24,7 @@
     ),
     url(../assets/images/background/image-background-min.png);
     background-repeat: no-repeat;
-    background-size: auto, cover;
+    background-size: cover;
     background-position: center;
     background-attachment: fixed;
 }
