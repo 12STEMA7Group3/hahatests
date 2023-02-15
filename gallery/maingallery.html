@@ -1,0 +1,610 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Main Gallery</title>
+    <meta name="author" content="Made by Aaron Angelo Medina Ragudos">
+    <meta name="description" content="An edited and improved version of a previous work made by me in school.">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Allura&display=swap');
+    </style>
+    <link rel="stylesheet" type="text/css" href="../styles/gallery.css">
+    <script defer type="text/javascript" src="../javascript/galleryfunctionality.js"></script>  
+</head>
+<body>
+    <div id="root">
+        <div class="background">
+            <div class="menu-container">
+                <div class="menu">
+                    <div class="header-show-on-mobile">
+                        <div class="logonav-section">
+                            <div class="logo-container">
+                                <img
+                                class="logo"
+                                src="../assets/images/logo/logo-min.png"
+                                type="image/png"
+                                alt="logo.png"
+                                >
+                            </div>
+                            <div class="text-container">
+                                <h1>Art Exhibit</h1>
+                            </div>
+                        </div>
+                        <div class="searchbar-section">
+                            <div class="searchbar-container">
+                                <div class="search-icon-container">
+                                    <img 
+                                    class="search-icon"
+                                    src="../assets/images/svg/search.svg"
+                                    type="svg/icon"
+                                    alt="Search Icon.svg"
+                                    >
+                                </div>
+                                <div class="searchbar-button-container">
+                                    <button type="button" onclick="showSearchBar()" class="searchbar-button">Search</button>
+                                </div>
+                                <input type="text" placeholder="Search..." aria-placeholder="Search..." class="searchbar" id="searchBar1" name="searchbar" onkeyup="searchFunction1()" />
+                            </div>
+                        </div>
+                        <div class="burger-icon-container">
+                            <span class="burger-icon" id="burger-icon" onclick="openNav()">&#9776;</span>
+                        </div>
+                        <div class="sidenavbar" id="sideNav">
+                            <button id="closebtn" type="button" class="closebutton" onclick="closeNav()">&times;</button>
+                            <div class="sidenavbar-buttons-container">
+                                <button class="sidenavbar-buttons accordion" type="button">Lightrooms</button> 
+                                <div class="sidenav-menu-content">
+                                    <a href="#">Photographies</a>
+                                    <a href="#">Digital Artworks</a>
+                                    <a href="#">Traditional Artworks</a>
+                                </div>
+                            </div>
+                            <div class="sidenavbar-buttons-container">
+                                <button class="sidenavbar-buttons accordion" type="button">About</button> 
+                                <div class="sidenav-menu-content">
+                                    <a href="#">About This Website</a>
+                                    <a href="#">About The Developers</a>
+                                </div>
+                            </div>
+                            <div class="sidenavbar-buttons-container">
+                                <button class="sidenavbar-buttons accordion" type="button">Contact Us</button> 
+                                <div class="sidenav-menu-content">
+                                    <a href="#">Through Phone</a>
+                                    <a href="#">Through Social Media</a>
+                                    <a href="#">Through School</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="header-show-on-desktop">
+                        <div class="searchbar-section">
+                            <div class="searchbar-container">
+                                <div class="search-icon-container">
+                                    <img 
+                                    class="search-icon"
+                                    src="../assets/images/svg/search.svg"
+                                    type="svg/icon"
+                                    alt="Search Icon.svg"
+                                    >
+                                </div>
+                                <input type="text" placeholder="Search..." aria-placeholder="Search..." class="searchbar" id="searchBar2" name="searchbar" onkeyup="searchFunction2()" />
+                            </div>
+                        </div>
+                        <div class="logonav-section">
+                            <div class="logo-container">
+                                <img
+                                class="logo"
+                                src="../assets/images/logo/logo-min.png"
+                                type="image/png"
+                                alt="logo.png"
+                                >
+                            </div>
+                            <div class="text-container">
+                                <h1>Art Exhibit</h1>
+                            </div>
+                        </div>
+                        <div class="nav-menu-container">
+                            <div class="navlist-container">
+                                <ul class>
+                                    <li>
+                                        <button type="button" class="list-button">Lightroom</button>
+                                        <div class="navmenu-dropdown">
+                                            <a href="#">Photographies</a>
+                                            <a href="#">Digital Artworks</a>
+                                            <a href="#">Traditional Artworks</a>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <button type="button" class="list-button">About</button>
+                                        <div class="navmenu-dropdown">
+                                            <a href="#">About The Developers</a>
+                                            <a href="#">About This Website</a>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <button type="button" class="list-button">Contact Us</button>
+                                        <div class="navmenu-dropdown">
+                                            <a href="#">Through Phone</a>
+                                        <a href="#">Through Social Media</a>
+                                        <a href="#">Through School</a>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="homepage-container">
+                            <a href="../index.html">
+                                <img
+                                class="homepage"
+                                src="../assets/images/logo/homepage-min.png"
+                                >
+                            </a>
+                        </div>
+                    </div>
+                </div> 
+            </div>
+            <div class="main-content" id="main-content">
+                <div class="title-container">
+                    <h1 class="title">Main Gallery</h1>
+                </div>
+                <div class="gridContainer">
+                    <div class="gridCentered">
+                        <div class="cardContainer">
+                            <div class="card landscape-card">
+                                <div class="image-container">
+                                    <div class="container-of-artwork" onclick="imageClick(this)">
+                                        <picture>
+                                            <source srcset="../assets/images/digital-art/Reminiscence-by-Kayla-min.webp" data-large="../assets/images/digital-art/Reminiscence-by-Kayla-min.webp" type="image/webp">
+                                            <source srcset="../assets/images/digital-art/jpg-png/Reminiscence-by-Kayla-min.png" data-large="../assets/images/digital-art/jpg-png/Reminiscence-by-Kayla-min.png" type="image/png">
+                                                <img loading="eager" class="gallery-images blurry-load" src="../assets/images/digital-art/jpg-png/Reminiscence-by-Kayla-min.png" data-large="../assets/images/digital-art/jpg-png/Reminiscence-by-Kayla-min.png" alt="Reminiscence by Kayla" type="image/png">
+                                        </picture>
+                                    </div>
+                                    <div class="content-of-image-container">
+                                        <div class="relative-container">
+                                            <div class="name-of-image-container">
+                                                <p class="name-of-image">REMINISCENCE</p>
+                                            </div>
+                                            <div class="menu-three-dots-container">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card small-card">
+                                <div class="image-container">
+                                    <div class="container-of-artwork" onclick="imageClick(this)">
+                                        <picture>
+                                            <source srcset="../assets/images/traditional-art/Unforgettable_Ramos-min.webp" type="image/webp">
+                                            <source srcset="../assets/images/traditional-art/jpg-png/Unforgettable_Ramos.jpg" type="image/jpg">
+                                                <img loading="eager" class="gallery-images" src="../assets/images/traditional-art/jpg-png/Unforgettable_Ramos.jpg" alt="Unforgettable by Ramos" type="image/jpg">
+                                        </picture>
+                                    </div>
+                                    <div class="content-of-image-container">
+                                        <div class="relative-container">
+                                            <div class="name-of-image-container">
+                                                <p class="name-of-image">UNFORGETTABLE</p>
+                                            </div>
+                                            <div class="menu-three-dots-container">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card medium-card">
+                                <div class="image-container">
+                                    <div class="container-of-artwork" onclick="imageClick(this)">
+                                        <picture>
+                                            <source srcset="../assets/images/photography/CAROUSEL_Vasquez-min.webp" type="image/webp">
+                                            <source srcset="../assets/images/photography/jpg-png/CAROUSEL_Vasquez-min.jpg" type="image/jpg">
+                                                <img loading="eager" class="gallery-images" src="../assets/images/photography/jpg-png/CAROUSEL_Vasquez-min.jpg" alt="Carousel by Vasquez" type="image/jpg">
+                                        </picture>
+                                    </div>
+                                    <div class="content-of-image-container">
+                                        <div class="relative-container">
+                                            <div class="name-of-image-container">
+                                                <p class="name-of-image">CAROUSEL</p>
+                                            </div>
+                                            <div class="menu-three-dots-container">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card large-card">
+                                <div class="image-container portrait">
+                                    <div class="container-of-artwork" onclick="imageClick(this)">
+                                        <picture>
+                                            <source srcset="../assets/images/photography/KALYE_Vasquez-min.webp" type="image/webp">
+                                            <source srcset="../assets/images/photography/jpg-png/KALYE_Vasquez-min.jpg" type="image/jpg">
+                                                <img loading="eager" class="gallery-images" src="../assets/images/photography/jpg-png/KALYE_Vasquez-min.jpg" alt="Kalye by Vasquez" type="image/jpg">
+                                        </picture>
+                                    </div>
+                                    <div class="content-of-image-container">
+                                        <div class="relative-container">
+                                            <div class="name-of-image-container">
+                                                <p class="name-of-image">KALYE</p>
+                                            </div>
+                                            <div class="menu-three-dots-container">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card landscape-card">
+                                <div class="image-container">
+                                    <div class="container-of-artwork" onclick="imageClick(this)">
+                                        <picture>
+                                            <source srcset="../assets/images/traditional-art/Honorary_Pua-min.webp" type="image/webp">
+                                            <source srcset="../assets/images/traditional-art/jpg-png/Honorary_Pua-min.png" type="image/png">
+                                                <img loading="lazy" class="gallery-images" src="../assets/images/traditional-art/Honorary_Pua-min.png" alt="Honorary by Pua" type="image/png">
+                                        </picture>
+                                    </div>
+                                    <div class="content-of-image-container">
+                                        <div class="relative-container">
+                                            <div class="name-of-image-container">
+                                                <p class="name-of-image">HONORARY</p>
+                                            </div>
+                                            <div class="menu-three-dots-container">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card small-card">
+                                <div class="image-container">
+                                    <div class="container-of-artwork" onclick="imageClick(this)">
+                                        <picture>
+                                            <source srcset="../assets/images/photography/DUYAN_Ygar,M.-min.webp" type="image/webp">
+                                            <source srcset="../assets/images/photography/jpg-png/DUYAN_Ygar,M.-min.jpg" type="image/jpg">
+                                                <img loading="lazy" class="gallery-images" src="../assets/images/photography/jpg-png/DUYAN_Ygar,M.-min.jpg" alt="Duyan by Ygar" type="image/jpg">
+                                        </picture>
+                                    </div>
+                                    <div class="content-of-image-container">
+                                        <div class="relative-container">
+                                            <div class="name-of-image-container">
+                                                <p class="name-of-image">DUYAN</p>
+                                            </div>
+                                            <div class="menu-three-dots-container">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card medium-card">
+                                <div class="image-container">
+                                    <div class="container-of-artwork" onclick="imageClick(this)">
+                                        <picture>
+                                            <source srcset="../assets/images/digital-art/Uson-part1childhoodfears-min.webp" type="image/webp">
+                                            <source srcset="../assets/images/digital-art/jpg-png/Uson-part1childhoodfears-min.png" type="image/png">
+                                                <img loading="lazy" class="gallery-images" src="../assets/images/digital-art/jpg-png/Uson-part1childhoodfears-min.png" alt="Kapre by Uson" type="image/png">
+                                        </picture>
+                                    </div>
+                                    <div class="content-of-image-container">
+                                        <div class="relative-container">
+                                            <div class="name-of-image-container">
+                                                <p class="name-of-image">KAPRE</p>
+                                            </div>
+                                            <div class="menu-three-dots-container">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card large-card">
+                                <div class="image-container portrait">
+                                    <div class="container-of-artwork" onclick="imageClick(this)">
+                                        <picture>
+                                            <source srcset="../assets/images/photography/KALARO_Ygar,M.-min.webp" type="image/webp">
+                                            <source srcset="../assets/images/photography/jpg-png/KALARO_Ygar,M.-min.jpg" type="image/jpg">
+                                                <img loading="lazy" class="gallery-images" src="../assets/images/photography/jpg-png/KALARO_Ygar,M.-min.jpg" alt="Kalaro by Ygar" type="image/jpg">
+                                        </picture>
+                                    </div>
+                                    <div class="content-of-image-container">
+                                        <div class="relative-container">
+                                            <div class="name-of-image-container">
+                                                <p class="name-of-image">KALARO</p>
+                                            </div>
+                                            <div class="menu-three-dots-container">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card landscape-card">
+                                <div class="image-container">
+                                    <div class="container-of-artwork" onclick="imageClick(this)">
+                                        <picture>
+                                            <source srcset="../assets/images/photography/PLAYGROUND_Ygar,M.-min.webp" type="image/webp">
+                                            <source srcset="../assets/images/photography/jpg-png/PLAYGROUND_Ygar,M.-min.jpg" type="image/jpg">
+                                                <img loading="lazy" class="gallery-images" src="../assets/images/photography/jpg-png/PLAYGROUND_Ygar,M.-min.jpg" alt="Playground by Ygar" type="image/jpg">
+                                        </picture>
+                                    </div>
+                                    <div class="content-of-image-container">
+                                        <div class="relative-container">
+                                            <div class="name-of-image-container">
+                                                <p class="name-of-image">PLAYGROUND</p>
+                                            </div>
+                                            <div class="menu-three-dots-container">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card small-card">
+                                <div class="image-container">
+                                    <div class="container-of-artwork" onclick="imageClick(this)">
+                                        <picture>
+                                            <source srcset="../assets/images/traditional-art/Kalsada_Ordinario-min.webp" type="image/webp">
+                                            <source srcset="../assets/images/traditional-art/jpg-png/Kalsada_Ordinario-min.jpg" type="image/jpg">
+                                                <img loading="lazy" class="gallery-images" src="../assets/images/traditional-art/jpg-png/Kalsada_Ordinario-min.jpg" alt="Kalsada by Ordinario" type="image/jpg">
+                                        </picture>
+                                    </div>
+                                    <div class="content-of-image-container">
+                                        <div class="relative-container">
+                                            <div class="name-of-image-container">
+                                                <p class="name-of-image">KALSADA</p>
+                                            </div>
+                                            <div class="menu-three-dots-container">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card medium-card">
+                                <div class="image-container">
+                                    <div class="container-of-artwork" onclick="imageClick(this)">
+                                        <picture>
+                                            <source srcset="../assets/images/digital-art/Sablay_Padit-min.webp" type="image/webp">
+                                            <source srcset="../assets/images/digital-art/jpg-png/Sablay_Padit-min.jpg" type="image/jpg">
+                                                <img loading="lazy" class="gallery-images" src="../assets/images/digital-art/jpg-png/Sablay_Padit-min.jpg" alt="Sablay by Padit" type="image/jpg">
+                                        </picture>
+                                    </div>
+                                    <div class="content-of-image-container">
+                                        <div class="relative-container">
+                                            <div class="name-of-image-container">
+                                                <p class="name-of-image">SABLAY</p>
+                                            </div>
+                                            <div class="menu-three-dots-container">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card medium-card">
+                                <div class="image-container portrait">
+                                    <div class="container-of-artwork" onclick="imageClick(this)">
+                                        <picture>
+                                            <source srcset="../assets/images/photography/NGITI_Salcedo-min.webp" type="image/webp">
+                                            <source srcset="../assets/images/photography/jpg-png/NGITI_Salcedo-min.jpg" type="image/jpg">
+                                                <img loading="lazy" class="gallery-images" src="../assets/images/photography/jpg-png/NGITI_Salcedo-min.jpg" alt="Ngiti by Salcedo" type="image/jpg">
+                                        </picture>
+                                    </div>
+                                    <div class="content-of-image-container">
+                                        <div class="relative-container">
+                                            <div class="name-of-image-container">
+                                                <p class="name-of-image">NGITI</p>
+                                            </div>
+                                            <div class="menu-three-dots-container">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card landscape-card">
+                                <div class="image-container">
+                                    <div class="container-of-artwork" onclick="imageClick(this)">
+                                        <picture>
+                                            <source srcset="../assets/images/traditional-art/Merienda_Villaflor-min.webp" type="image/webp">
+                                            <source srcset="../assets/images/traditional-art/jpg-png/Merienda_Villaflor-min.jpg" type="image/jpg">
+                                                <img loading="lazy" class="gallery-images" src="../assets/images/traditional-art/jpg-png/Merienda_Villaflor-min.jpg" alt="Ngiti by Salcedo" type="image/jpg">
+                                        </picture>
+                                    </div>
+                                    <div class="content-of-image-container">
+                                        <div class="relative-container">
+                                            <div class="name-of-image-container">
+                                                <p class="name-of-image">MERIENDA</p>
+                                            </div>
+                                            <div class="menu-three-dots-container">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card large-card">
+                                <div class="image-container portrait">
+                                    <div class="container-of-artwork" onclick="imageClick(this)">
+                                        <picture>
+                                            <source srcset="../assets/images/photography/ILOG_Salcedo-min.webp" type="image/webp">
+                                            <source srcset="../assets/images/photography/jpg-png/ILOG_Salcedo-min.jpg" type="image/jpg">
+                                                <img loading="lazy" class="gallery-images" src="../assets/images/photography/jpg-png/ILOG_Salcedo-min.jpg" alt="Ilog by Salcedo" type="image/jpg">
+                                        </picture>
+                                    </div>
+                                    <div class="content-of-image-container">
+                                        <div class="relative-container">
+                                            <div class="name-of-image-container">
+                                                <p class="name-of-image">ILOG</p>
+                                            </div>
+                                            <div class="menu-three-dots-container">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card small-card">
+                                <div class="image-container">
+                                    <div class="container-of-artwork" onclick="imageClick(this)">
+                                        <picture>
+                                            <source srcset="../assets/images/digital-art/Nostalgia-Strike-by-Orcajada-min.webp" type="image/webp">
+                                            <source srcset="../assets/images/digital-art/jpg-png/Nostalgia-Strike-by-Orcajada-min.png" type="image/png">
+                                                <img loading="lazy" class="gallery-images" src="../assets/images/digital-art/jpg-png/Nostalgia-Strike-by-Orcajada-min.png" alt="Nostalgia Strikes by Orcajada" type="image/png">
+                                        </picture>
+                                    </div>
+                                    <div class="content-of-image-container">
+                                        <div class="relative-container">
+                                            <div class="name-of-image-container">
+                                                <p class="name-of-image">NOSTALGIA STRIKES</p>
+                                            </div>
+                                            <div class="menu-three-dots-container">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card medium-card">
+                                <div class="image-container">
+                                    <div class="container-of-artwork" onclick="imageClick(this)">
+                                        <picture>
+                                            <source srcset="../assets/images/digital-art/Uson-part2childhoodfears-min.webp" type="image/webp">
+                                            <source srcset="../assets/images/digital-art/jpg-png/Uson-part2childhoodfears-min.png" type="image/png">
+                                                <img loading="lazy" class="gallery-images" src="../assets/images/digital-art/jpg-png/Uson-part2childhoodfears-min.png" alt="Manananggal by Uson" type="image/png">
+                                        </picture>
+                                    </div>
+                                    <div class="content-of-image-container">
+                                        <div class="relative-container">
+                                            <div class="name-of-image-container">
+                                                <p class="name-of-image">MANANANGGAL</p>
+                                            </div>
+                                            <div class="menu-three-dots-container">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card large-card">
+                                <div class="image-container portrait">
+                                    <div class="container-of-artwork" onclick="imageClick(this)">
+                                        <picture>
+                                            <source srcset="../assets/images/photography/blank(6)_Salcedo-min.webp" type="image/webp">
+                                            <source srcset="../assets/images/photography/jpg-png/blank(6)_Salcedo-min.jpg" type="image/jpg">
+                                                <img loading="lazy" class="gallery-images" src="../assets/images/photography/jpg-png/blank(6)_Salcedo-min.jpg" alt="Luscious Treats by Salcedo" type="image/jpg">
+                                        </picture>
+                                    </div>
+                                    <div class="content-of-image-container">
+                                        <div class="relative-container">
+                                            <div class="name-of-image-container">
+                                                <p class="name-of-image">LUSCIOUS TREATS</p>
+                                            </div>
+                                            <div class="menu-three-dots-container">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card medium-card">
+                                <div class="image-container">
+                                    <div class="container-of-artwork" onclick="imageClick(this)">
+                                        <picture>
+                                            <source srcset="../assets/images/photography/blank(1)_Salcedo-min.webp" type="image/webp">
+                                            <source srcset="../assets/images/photography/jpg-png/blank(1)_Salcedo-min.jpg" type="image/jpg">
+                                                <img loading="lazy" class="gallery-images" src="../assets/images/photography/jpg-png/blank(1)_Salcedo-min.jpg" alt="Palaruan by Salcedo" type="image/jpg">
+                                        </picture>
+                                    </div>
+                                    <div class="content-of-image-container">
+                                        <div class="relative-container">
+                                            <div class="name-of-image-container">
+                                                <p class="name-of-image">PALARUAN</p>
+                                            </div>
+                                            <div class="menu-three-dots-container">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card medium-card">
+                                <div class="image-container">
+                                    <div class="container-of-artwork" onclick="imageClick(this)">
+                                        <picture>
+                                            <source srcset="../assets/images/traditional-art/Kalinga-min.webp" type="image/webp">
+                                            <source srcset="../assets/images/traditional-art/jpg-png/Kalinga-min.jpg" type="image/jpg">
+                                                <img loading="lazy" class="gallery-images" src="../assets/images/traditional-art/jpg-png/Kalinga-min.jpg" alt="Kalinga by Ramirez" type="image/jpg">
+                                        </picture>
+                                    </div>
+                                    <div class="content-of-image-container">
+                                        <div class="relative-container">
+                                            <div class="name-of-image-container">
+                                                <p class="name-of-image">KALINGA</p>
+                                            </div>
+                                            <div class="menu-three-dots-container">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card large-card">
+                                <div class="image-container portrait">
+                                    <div class="container-of-artwork" onclick="imageClick(this)">
+                                        <picture>
+                                            <source srcset="../assets/images/traditional-art/Anamnesis_Pehipol-min.webp" type="image/webp">
+                                            <source srcset="../assets/images/traditional-art/jpg-png/Anamnesis_Pehipol-min.jpg" type="image/jpg">
+                                                <img loading="lazy" class="gallery-images" src="../assets/images/traditional-art/jpg-png/Anamnesis_Pehipol-min.jpg" alt="Anamnesis by Pehipol" type="image/jpg">
+                                        </picture>
+                                    </div>
+                                    <div class="content-of-image-container">
+                                        <div class="relative-container">
+                                            <div class="name-of-image-container">
+                                                <p class="name-of-image">ANAMNESIS</p>
+                                            </div>
+                                            <div class="menu-three-dots-container">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card medium-card">
+                                <div class="image-container portrait">
+                                    <div class="container-of-artwork" onclick="imageClick(this)">
+                                        <picture>
+                                            <source srcset="../assets/images/photography/PIKO_Vasquez-min.webp" type="image/webp">
+                                            <source srcset="../assets/images/photography/jpg-png/PIKO_Vasquez-min.jpg" type="image/jpg">
+                                                <img loading="lazy" class="gallery-images" src="../assets/images/photography/jpg-png/PIKO_Vasquez-min.jpg" alt="Piko by Vasquez" type="image/jpg">
+                                        </picture>
+                                    </div>
+                                    <div class="content-of-image-container">
+                                        <div class="relative-container">
+                                            <div class="name-of-image-container">
+                                                <p class="name-of-image">PIKO</p>
+                                            </div>
+                                            <div class="menu-three-dots-container">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div> 
+    <!--MODAL SECTION-->
+    <div class="modal-section">
+        <div class="modal-content">
+            <div class="modal-header">
+                <span class="modal-closebutton" onclick="closeModal()">&times;</span>
+            </div>
+            <div class="modal-main-content">
+                <div class="modal-image-container" id="modalImageContainer">
+                </div>
+                <h1 id="modalImageName"></h1>
+                <div class="modal-description-container">
+                    <p class="modal-description" id="modalDescription"></p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript">
+        const threeDotsContainer = document.getElementsByClassName('menu-three-dots-container');
+        const menuDotsInjector = () => {
+            let i;
+            for ( i = 0; i < threeDotsContainer.length; i++) {
+                threeDotsContainer[i].innerHTML = '<img src="../assets/images/svg/three-dots-svgrepo-com.svg" class="three-dots" type="icon/svg" alt="three-dots">';
+            }
+        }
+        menuDotsInjector();
+    </script>
+</body>
+</html>

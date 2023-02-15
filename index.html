@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Art Exhibition</title>
+    <meta name="author" content="Made by Aaron Angelo Medina Ragudos">
+    <meta name="description" content="An edited and improved version of a previous work made by me in school.">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Allura&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+    </style>
+    <link rel="stylesheet" type="text/css" href="styles/index.css">
+    <script type="text/javascript" src="javascript/storage.js" defer></script>
+    <script type="text/javascript" src="javascript/index.js" defer></script>
+</head>
+<body class="body" onload="imageInjector()">
+    <!--MENU SECTION-->
+        <div class="firstbg background" id="firstbg">
+            <div class="menu-container">
+                <div class="menu">
+                    <!--SHOW ON MOBILE-->
+                    <div class="show-on-mobile">
+                        <div class="logo-section-container">
+                            <div class="logo-container">
+                                <picture>
+                                    <img src="assets/images/logo/logo-min.png" class="images logo" type="image/png" alt="logo"> 
+                                </picture>
+                            </div>
+                            <div class="name-container">
+                                <h1 class="name-header">Art Exhibit</h1>
+                            </div>
+                        </div>
+                        <div class="burger-icon-container">
+                            <span class="burger-icon" id="burger-icon" onclick="openNav()">&#9776;</span>
+                        </div>
+                        <div id="sideNav" class="sidenav">
+                            <button id="closebtn" type="button" class="closebtn" onclick="closeNav()">&times;</button>
+                            <div class="sidenav-buttons-container">
+                                <button type="button" class="sidenav-button accordion">ABOUT</button>
+                                <div class="sidenav-menu-content">
+                                    <a href="#">About This Website</a>
+                                    <a href="#">About The Developers</a>
+                                </div>
+                            </div>
+                            <div class="sidenav-buttons-container">
+                                <button type="button" class="sidenav-button accordion">GALLERY</button>
+                                <div class="sidenav-menu-content">
+                                    <a href="gallery/maingallery.html">Main Gallery</a>
+                                    <a href="#">Photographies</a>
+                                    <a href="#">Digital Artworks</a>
+                                    <a href="#">Traditional Artworks</a>
+                                </div>
+                            </div>
+                            <div class="sidenav-buttons-container">
+                                <button type="button" class="sidenav-button" onclick="newSite(trailer)">TRAILER</button>
+                            </div>
+                            <div class="sidenav-buttons-container">
+                                <button type="button" class="sidenav-button accordion">CONTACT US</button>
+                                <div class="sidenav-menu-content">
+                                    <a href="#">Through Phone</a>
+                                    <a href="#">Through Social Media</a>
+                                    <a href="#">Through School</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--SHOW ON MOBILE-->
+
+                    <!--SHOW ON DESKTOP-->
+                    <div class="show-on-desktop">
+                        <div class="logo-container">
+                            <picture>
+                                <img src="assets/images/logo/logo-min.png" class="images logo" type="image/png" alt="logo"> 
+                            </picture>
+                        </div>
+                        <div class="secondname-container">
+                            <h1 class="name-header">Art Exhibit</h1>
+                        </div>
+                        <div class="menu-list">
+                            <ul class>
+                                <li>
+                                    <button type="button" class="menu-button">ABOUT</button>
+                                    <div class="menu-button-content">
+                                        <a href="#">About This Website</a>
+                                        <a href="#">About The Developers</a>
+                                    </div>
+                                </li>
+                                <li>
+                                    <button type="button" class="menu-button">GALLERY</button>
+                                    <div class="menu-button-content">
+                                        <a href="gallery/maingallery.html">Main Gallery</a>
+                                        <a href="#">Photographies</a>
+                                        <a href="#">Digital Artworks</a>
+                                        <a href="#">Traditional Artworks</a>
+                                    </div>
+                                </li>
+                                <li>
+                                    <button type="button" class="menu-button" onclick="newSite(trailer)">TRAILER</button>
+                                </li>
+                                <li>
+                                    <button type="button" class="menu-button">CONTACT US</button>
+                                    <div class="menu-button-content">
+                                        <a href="#">Through Phone</a>
+                                        <a href="#">Through Social Media</a>
+                                        <a href="#">Through School</a>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--SHOW ON DESKTOP-->
+            <!--MENU SECTION-->
+
+            <!--INTRODUCTION-->
+            <div class="container-for-height">
+                <div id="firstpartcontainer">
+                    <div class="introduction-container">
+                        <div class="website-title-container">
+                            <h1 class="title website-title">Contemporary Arts of the Philippines</h1>
+                            <h2 class="theme">Filipino Childhood</h2>
+                        </div>
+                        <div class="tagline-container">
+                            <p class="tagline website-tagline">"Pagbabalik Tanaw sa Minsan nang Nakagisnan Ng Sambayanan"</p>
+                        </div>
+                    </div>
+                </div>
+            </div>      
+            <!--INTRODUCTION-->
+
+            <!--SLIDESHOW SECTION-->
+            <div class="container-for-fixed">
+                <div class="slideshow-section">
+                    <div class="title slideshow-title-container">
+                        <h2 class="title slideshow-title">The <strong>Best Artworks and Photographies</strong> Taken and Made</h2>
+                    </div>
+                    <div class="slideshow-container">
+                        <div class="slidesContainer fade-animation">
+                            <div class="artwork-container portrait">
+                                <div class="image-placement-text">1 / 10</div>
+                                <div class="title caption">Ngiti by Salcedo</div>
+                            </div>
+                        </div>
+                        <div class="slidesContainer fade-animation">
+                            <div class="artwork-container portrait">
+                                <div class="image-placement-text">2 / 10</div>
+                                <div class="title caption">Piko by Vasquez</div>
+                            </div>
+                        </div>
+                        <div class="slidesContainer fade-animation">
+                            <div class="artwork-container landscape">
+                                <div class="image-placement-text">3 / 10</div>
+                                <div class="title caption">Playground by Ygar</div>
+                            </div>
+                        </div>
+                        <div class="slidesContainer fade-animation">
+                            <div class="artwork-container landscape">
+                                <div class="image-placement-text">4 / 10</div>
+                                <div class="title caption">Reminiscence by Vallejos</div>
+                            </div>
+                        </div>
+                        <div class="slidesContainer fade-animation">
+                            <div class="artwork-container portrait">
+                                <div class="image-placement-text">5 / 10</div>
+                                <div class="title caption">Sablay by Padit</div>
+                            </div>
+                        </div>
+                        <div class="slidesContainer fade-animation">
+                            <div class="artwork-container portrait">
+                                <div class="image-placement-text">6 / 10</div>
+                                <div class="title caption">Ilog by Salcedo</div>
+                            </div>
+                        </div>
+                        <div class="slidesContainer fade-animation">
+                            <div class="artwork-container portrait">
+                                <div class="image-placement-text">7 / 10</div>
+                                <div class="title caption">Candies by Salcedo</div>
+                            </div>
+                        </div>
+                        <div class="slidesContainer fade-animation">
+                            <div class="artwork-container landscape">
+                                <div class="image-placement-text">8 / 10</div>
+                                <div class="title caption">Honorary by Pua</div>
+                            </div>
+                        </div>
+                        <div class="slidesContainer fade-animation">
+                            <div class="artwork-container landscape">
+                                <div class="image-placement-text">9 / 10</div>
+                                <div class="title caption">Unforgettable by Ramos</div>
+                            </div>
+                        </div>
+                        <div class="slidesContainer fade-animation">
+                            <div class="artwork-container portrait">
+                                <div class="image-placement-text">10 / 10</div>
+                                <div class="title caption">Anamnesis by Pehipol</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="square-container">
+                        <span class="square" onclick="toPresentSlide(1)"></span>
+                        <span class="square" onclick="toPresentSlide(2)"></span>
+                        <span class="square" onclick="toPresentSlide(3)"></span>
+                        <span class="square" onclick="toPresentSlide(4)"></span>
+                        <span class="square" onclick="toPresentSlide(5)"></span>
+                        <span class="square" onclick="toPresentSlide(6)"></span>
+                        <span class="square" onclick="toPresentSlide(7)"></span>
+                        <span class="square" onclick="toPresentSlide(8)"></span>
+                        <span class="square" onclick="toPresentSlide(9)"></span>
+                        <span class="square" onclick="toPresentSlide(10)"></span>
+                    </div>
+                </div>
+        </div>
+        </div>
+    </div>
+    <!--SLIDESHOW SECTION-->
+    <div class="secondbg background">
+        <div class="container-secondbg">
+            <video plays-inline muted class="back-video" id="back-video">
+                <source src="assets/videos/trailer.mp4" type="video/mp4">
+                <track src="assets/subtitles/trailer.vtt" kind="subtitles" srclang="en" label="English">
+            </video>
+            <div class="container">
+                <div class="container-of-text-container">
+                <div class="text-container">
+                        <h1 class="title secondpage-title">
+                            KABATAAN ANG
+                            <strong>PAGASA</strong>
+                            NG BAYAN
+                        </h1>
+                        <p class="description">
+                            <strong>We are group #3 from Technological Institute of the Philippines - Quezon City</strong>
+                            <br>
+                            <br>
+                            Each artwork has been made and taken by each of our respective members.
+                            <br>
+                            <br>
+                            You shall remember your childhood as you go through this website.
+                            <br>
+                            <br>
+                        </p>
+                        <br>
+                        <div class="link-container" id="secondpagebutton">
+                            <a href="gallery/maingallery.html"   class="button-secondpage">
+                                Go Now
+                            </a>
+                            <div class="toolbox" id="toolbox">To Main Gallery</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="pause-play-button-container" aria-live="polite">
+                <button type="button" class="control-button" id="backgroundvideo-control-button">
+                    <span id="pause" class="pause" hidden="true">
+                        <img 
+                        src="https://uploads-ssl.webflow.com/6022af993a6b2191db3ed10c/628299f8aa233b83918e24fd_Pause.svg"
+                        alt="Pause.svg"
+                        >
+                    </span>
+                    <span id="play" class="play">
+                        <img
+                        src="https://uploads-ssl.webflow.com/6022af993a6b2191db3ed10c/628298b20ae0236682d4b87f_Play-24.svg"
+                        alt="play"
+                        >
+                    </span>
+                </button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+                           
